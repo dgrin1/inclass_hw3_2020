@@ -1,0 +1,8 @@
+length = int(input("How many terms do you want to compute? "))
+#get number of terms to compute
+
+tot = 0.0
+
+for i in range(length):
+	tot = tot + 1.0/(i+1)
+print("your total is", tot)
