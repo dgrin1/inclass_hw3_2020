@@ -32,6 +32,5 @@ def gcos(x):
             break # quit loop if converged to machine precision
     return s
 
-
-print(gcos(0))
-print(gcos(np.pi))
+def gtan(x):
+    return float(gsin(x)/gcos(x))
