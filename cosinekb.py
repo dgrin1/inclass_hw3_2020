@@ -17,4 +17,4 @@ def taylorcos(x):
 
 x = int(input("Please enter your angle"))
 
-print(taylorcos(x))
+print("The cosine of", x, "is", taylorcos(x))
