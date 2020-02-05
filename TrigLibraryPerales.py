@@ -14,3 +14,13 @@ def scos(x):
     
 def stan(x):
     return ssin(x)/scos(x)
+
+def ssec(x):
+    return 1/scos(x)
+
+def scsc(x):
+    return 1/ssin(x)
+
+def scot(x):
+    return 1/stan(x)
+    
