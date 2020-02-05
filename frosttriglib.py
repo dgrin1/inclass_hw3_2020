@@ -55,11 +55,9 @@ def fcot(x):
 # In[6]:
 
 
-print(ftan(3))
+
 
 
 # In[ ]:
-
-
 
 
