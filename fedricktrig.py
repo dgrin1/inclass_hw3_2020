@@ -37,17 +37,17 @@ def scos(x):
 	return s
 #divide sin(x) by cos(x) to get tan
 def stan(x):
-    result=sin(x)/cos(x)
+    result=ssin(x)/scos(x)
     return result
 #reciprocal of cos
 def ssec(x):
-    result=1/cos(x)
+    result=1/scos(x)
     return result
 #reciprocal of sine
 def scosec(x):
-    result=1/sin(x)
+    result=1/ssin(x)
     return result
 #reciprocal of tan
 def scotan(x):
-    result=1/tan(x)
+    result=1/stan(x)
     return result
