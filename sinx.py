@@ -9,6 +9,6 @@ while i<1000:
     s+= float((((-1)**i) * (x**((2*i) + 1))))/float(math.factorial(((2*i) + 1)))
     i += 1
     if sold == s: i=1000000
-print s
+print(s)
     
 
