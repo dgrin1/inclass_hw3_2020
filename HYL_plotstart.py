@@ -1,6 +1,8 @@
 import matplotlib.pyplot as plt
 import numpy as np
+#import matplotlib.font_manager as font_manager
 
+#font_manager._rebuild()
 '''
 String variable with Tex enable should be careful when using symbol like "_", which needs to be "\_" instead
 '''
@@ -9,8 +11,10 @@ String variable with Tex enable should be careful when using symbol like "_", wh
 plt.ion()
 #Use Latex fonts
 plt.rc('text',usetex=True)
+plt.rc('font', family='serif')
 
-'''The tex font is not yet working and needs specific environment: https://matplotlib.org/tutorials/text/usetex.html'''
+''' The tex font not found solution could be: https://stackoverflow.com/questions/42097053/matplotlib-cannot-find-basic-fonts, where MacOS uses brew instead of apt-get'''
+
 #plt.rc('font',**{'family':'sans-serif','sans-serif':['Helvetica']})
 ## for Palatino and other serif fonts use:
 #plt.rc('font',**{'family':'serif','serif':['Palatino']})
