@@ -4,10 +4,8 @@ Created on Mon Feb  3 12:54:30 2020
 
 @author: shaun
 """
-
 import numpy as np
 import math
-
 def ssin(x):
 #take arg mod 2pi
 	x=x%(2.e0*np.pi)
@@ -22,7 +20,7 @@ def ssin(x):
 #If converged to machine precision then break out of loop
 		if sold==s: break
 	return s
-
+#just modifies the taylor series dan found for sin(x)
 def scos(x):
 #take arg mod 2pi
 	x=x%(2.e0*np.pi)
@@ -37,17 +35,19 @@ def scos(x):
 #If converged to machine precision then break out of loop
 		if sold==s: break
 	return s
-
+#divide sin(x) by cos(x) to get tan
 def stan(x):
-    result=sin(x)/cos(x)
+    result=ssin(x)/scos(x)
     return result
-
+#reciprocal of cos
 def ssec(x):
-    result=1/cos(x)
+    result=1/scos(x)
     return result
+#reciprocal of sine
 def scosec(x):
-    result=1/sin(x)
+    result=1/ssin(x)
     return result
+#reciprocal of tan
 def scotan(x):
-    result=1/tan(x)
+    result=1/stan(x)
     return result
