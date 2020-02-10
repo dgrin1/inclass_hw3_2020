@@ -5,6 +5,7 @@
 import numpy as np
 import math
 
+#sine
 def ewar_sin(x):
 #take arg mod 2pi
 	x=x%(2.e0*np.pi)
@@ -20,6 +21,7 @@ def ewar_sin(x):
 		if sold==s: break
 	return s
 	
+#cosine
 def ewar_cos(x):
 #take arg mod 2pi
 	x=x%(2.e0*np.pi)
@@ -35,6 +37,7 @@ def ewar_cos(x):
 		if cold==c: break
 	return c
 	
+#tangent
 def ewar_tan(x):
 #take arg mod 2pi
 	x=x%(2.e0*np.pi)
@@ -45,7 +48,7 @@ def ewar_tan(x):
 #Keep at most 10000 terms in the Taylor series
 	for i in range(1000):
 		told=t
-		t+= ewar_sin(x)/ewar_cos(x)
+		t+= (ewar_sin(x))/(ewar_cos(x))
 #If converged to machine precision then break out of loop
 		if told==t: break
 	return t
