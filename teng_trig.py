@@ -34,3 +34,35 @@ def gcos(x):
 
 def gtan(x):
     return float(gsin(x)/gcos(x))
+
+def gsec(x):
+    return float(1/gcos(x))
+
+def gcsc(x):
+    return float(1/gsin(x))
+
+def gcot(x):
+    return float(1/gtan(x))
+
+import matplotlib.pyplot as plt
+
+x=np.linspace(0.001,2*np.pi-0.001,1000)
+functions=['sin','cos','tan','csc','sec','cot']
+outputs=[[],[],[],[],[],[]]
+colors=plt.cm.viridis(np.linspace(0,1,6))
+
+for i in x:
+    outputs[0].append(gsin(i))
+    outputs[1].append(gcos(i))
+    outputs[2].append(gtan(i))
+    outputs[3].append(gcsc(i))
+    outputs[4].append(gsec(i))
+    outputs[5].append(gcot(i))
+
+plt.figure()
+
+for i in range(6):
+    plt.scatter(x,outputs[i],c=colors[i],label=functions[i],marker=".")
+plt.ylim(-2,2)
+plt.legend()
+plt.show()

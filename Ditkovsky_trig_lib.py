@@ -10,7 +10,7 @@ def my_sin(x): #takes x in radians)
 	
 	while i < 1000:
 		s_old = s
-		s += float((((-1)**i) * (x**((2*i) + 1))))/float(math.factorial(((2*i) + 1)))
+		s += float((((-1)**i) * (x**((2*i) + 1))))/float(math.factorial(((2*i) + 1))
 #break when next term is negligible
 		i += 1
 		if s == s_old: break
