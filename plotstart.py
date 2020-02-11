@@ -6,7 +6,6 @@ plt.ion()
 
 #Use Latex fonts
 plt.rc('text',usetex=True)
-plt.rc('font', family='serif')
 
 #dense x grid for theory curve
 x=np.linspace(0,2*3.14159,1000)
