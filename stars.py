@@ -1,4 +1,4 @@
-from __future__ import division,print_function
+#from __future__ import division,print_function
 from scipy import constants as sc
 from numpy import loadtxt,array,dot,sqrt,cos,sin,linspace,log
 import numpy as np
