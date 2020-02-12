@@ -1,11 +1,11 @@
-from __future__ import division,print_function
+#from __future__ import division,print_function
 from scipy import constants as sc
 from numpy import loadtxt,array,dot,sqrt,cos,sin,linspace,log
 import numpy as np
 from math import pi
 
 import matplotlib.pyplot as plt
-plt.ion()
+#plt.ion()
 data=loadtxt("stars.txt",float)
 x=data[:,0]
 y=data[:,1]
@@ -19,6 +19,7 @@ for i in range(0,nstarsm1):
 		xbetter.append(x[i])
 		ybetter.append(y[i])
 
+# range(start, stop, step)
 subs=range(0,nstarsm1,5)
 xsubs=x[subs]
 ysubs=y[subs]
