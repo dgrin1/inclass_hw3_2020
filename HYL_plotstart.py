@@ -11,13 +11,13 @@ String variable with Tex enable should be careful when using symbol like "_", wh
 plt.ion()
 #Use Latex fonts
 plt.rc('text',usetex=True)
-#plt.rc('font', family='serif')
+plt.rc('font', family='serif')
 
 ''' The tex font not found solution could be: https://matplotlib.org/1.3.1/users/usetex.html'''
 
 #plt.rc('font',**{'family':'sans-serif','sans-serif':['Helvetica']})
 ## Using Palatino font (terminal might print warning):
-plt.rc('font',**{'family':'serif','serif':['Palatino']})
+#plt.rc('font',**{'family':'serif','serif':['Palatino']})
 
 #dense x grid for theory curve
 x=np.linspace(0,2*3.14159,1000)
