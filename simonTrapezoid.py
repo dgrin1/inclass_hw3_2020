@@ -7,6 +7,6 @@ funn = (xx**4)-(2*xx)+1
 
 
 for x in range(step-1):
-    summ += (funn[x]+funn[x+1])/step
+    summ += (funn[x]+funn[x+1])/(step-1)
 
 print(summ)

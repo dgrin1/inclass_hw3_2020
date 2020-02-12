@@ -1,0 +1,15 @@
+import matplotlib.pyplot as plt
+import numpy as np
+#plt.ion only works in interactive mode
+#plt.ion()
+#plt.rc('text',usetex=True)
+#plt.rc('font', family='sans-serif')
+#plt.rc('font', sans-serif='Tahoma')
+
+x=np.linspace(0,2*np.pi,100)
+y=np.sin(x)
+#x2=np.linspace(0,2*np.pi,15)
+#y2=np.sin(x2)
+#y3=np.sin(x+.4)
+plt.plot(x,y)
+plt.show
