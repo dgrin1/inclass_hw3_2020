@@ -47,8 +47,12 @@ def analytic(xmin, xmax):
 	end = (3*xmax**3-2)
 	return (end-start)
 
-def error(nfunc, afunc, func, Nmin, Nmax, xmin, xmax):
-	Narray = np.arange(Nmin, Nmax, 1)
+def error(nfunc, afunc, func, Nmin, Nmax, xmin, xmax, even=False):
+	
+	if even == False:
+		Narray = np.arange(Nmin, Nmax, 1)
+	else:
+		Narray = np.arange(Nmin, Nmax, 2)
 	error_dist = []
 
 	for N in Narray:
@@ -60,14 +64,20 @@ def error(nfunc, afunc, func, Nmin, Nmax, xmin, xmax):
 
 	return error_dist
 
-Ndomain = np.arange(100, 1000, 1)
-trapacurve = error(trapazoid, analytic, poly, 100, 1000, 0, 1000)
-simpcurve = error(simpson, analytic, poly, 100, 1000, 0, 1000)
-riecurve = error(riemann, analytic, poly, 100, 1000, 0, 1000)
+#trap = trapazoid(poly, 1000, 0, 100)
+#simp = simpson(poly, 1000, 0, 100)
+#anal = analytic(0, 100)
+#print(trap, simp, anal)
+
+Ndomain = np.arange(10000, 11000, 1)
+Ndomain2 = np.arange(10000, 11000, 2)
+trapacurve = error(trapazoid, analytic, poly, 10000, 11000, 0, 1000)
+simpcurve = error(simpson, analytic, poly, 10000, 11000, 0, 1000, even=True)
+#riecurve = error(riemann, analytic, poly, 10000, 11000, 0, 1000)
 
 plt.plot(Ndomain, trapacurve, label="trapazoid curve")
-plt.scatter(Ndomain, simpcurve, label="simpson curve")
-plt.plot(Ndomain, riecurve, label="reimann curve")
+plt.plot(Ndomain2, simpcurve, label="simpson curve")
+#plt.plot(Ndomain, riecurve, label="reimann curve")
 
 plt.legend()
 plt.show()
