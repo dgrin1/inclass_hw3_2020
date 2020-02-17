@@ -1,4 +1,5 @@
 #importing math and numpy
+import matplotlib.pyplot as plt
 import numpy as np
 import math
 #defining the first trig equation of sine

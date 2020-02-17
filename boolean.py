@@ -1,0 +1,1 @@
+f(x)=lambda x,y:x+y
